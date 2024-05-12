@@ -20,7 +20,7 @@ function ContenedorSeguirPerfil(){
             <p className='a-quien'>A quién seguir</p>
             {
                 perfiles.map((perfil) => {
-                    if(perfil.id < 4 || mostrarTodos){
+                    if((perfil.id < 4 || mostrarTodos) && !perfil.loSigo){
                         return <SeguirPerfil key={perfil.id} nombre={perfil.nombre} usuario={perfil.usuario} foto={perfil.foto} verificado={perfil.verificado} loSigo={perfil.loSigo} teSigue={perfil.teSigue}/>
                     }
                 })
